@@ -3,52 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
+    <title>Danica Rose Subion | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-        <p>A simple HTML-only starter template.</p>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Danica Rose Subion home">dr<span>.</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+            <span>Menu</span>
+        </button>
+        <nav id="main-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <hr>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>This is where you can write a brief introduction about yourself or your site.</p>
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <p class="eyebrow">Personal portfolio · 2026</p>
+            <h1 id="hero-title">Hello, I’m<br><em>Danica Rose.</em></h1>
+            <p class="hero-copy">A 20-year-old Bachelor of Science in Information Technology student finding thoughtful ways to learn, create, and grow.</p>
+            <a class="button" href="#about">Get to know me <span aria-hidden="true">↗</span></a>
         </section>
 
-        <section id="projects">
-            <h2>My Projects</h2>
-            <ul>
-                <li>Project 1: HTML Basics</li>
-                <li>Project 2: Git Version Control</li>
-            </ul>
+        <section id="about" class="intro">
+            <p class="section-label">01 / About</p>
+            <div>
+                <h2>Learning with purpose,<br>growing every day.</h2>
+                <p>I am currently in my third year at Cavite State University, building my skills in technology while discovering the ideas and activities that keep me inspired.</p>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Feel free to reach out via email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <section id="projects" class="projects">
+            <div class="section-heading">
+                <p class="section-label">02 / What I enjoy</p>
+                <h2>Small joys,<br><em>big energy.</em></h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card project-card--sage" tabindex="0">
+                    <p class="project-number">01</p>
+                    <h3>Reading</h3>
+                    <p>Getting lost in stories, ideas, and new perspectives through the pages of a good book.</p>
+                    <span class="project-link">A quiet kind of adventure</span>
+                </article>
+                <article class="project-card project-card--peach" tabindex="0">
+                    <p class="project-number">02</p>
+                    <h3>Writing</h3>
+                    <p>Putting thoughts into words, from personal reflections to ideas that are still taking shape.</p>
+                    <span class="project-link">Making thoughts tangible</span>
+                </article>
+                <article class="project-card project-card--sage">
+                    <p class="project-number">03</p>
+                    <h3>Badminton</h3>
+                    <p>Staying active, focused, and present one rally at a time on the court.</p>
+                    <span class="project-link">Play with intention</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <p class="section-label">03 / A little more</p>
+            <h2>Stay curious.<br><em>Keep becoming.</em></h2>
+            <a class="contact-link" href="#top">Back to the beginning <span aria-hidden="true">↗</span></a>
         </section>
     </main>
 
-    <hr>
-
-    <footer>
-        <p>&copy; 2026 My Webpage. All rights reserved.</p>
+    <footer class="site-footer">
+        <p>© 2026 Danica Rose Subion</p>
+        <p>BSIT · Cavite State University</p>
     </footer>
 
+    <script src="script,js" defer></script>
 </body>
 </html>

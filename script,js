@@ -1,0 +1,39 @@
+const header = document.querySelector('.site-header');
+const menuToggle = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('#main-nav');
+const projectCards = document.querySelectorAll('.project-card');
+
+const updateHeader = () => {
+	header.classList.toggle('is-scrolled', window.scrollY > 24);
+};
+
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
+
+menuToggle.addEventListener('click', () => {
+	const isOpen = navigation.classList.toggle('is-open');
+	menuToggle.setAttribute('aria-expanded', String(isOpen));
+	menuToggle.querySelector('span').textContent = isOpen ? 'Close' : 'Menu';
+});
+
+navigation.querySelectorAll('a').forEach((link) => {
+	link.addEventListener('click', () => {
+		navigation.classList.remove('is-open');
+		menuToggle.setAttribute('aria-expanded', 'false');
+		menuToggle.querySelector('span').textContent = 'Menu';
+	});
+});
+
+const revealObserver = new IntersectionObserver((entries, observer) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('is-visible');
+			observer.unobserve(entry.target);
+		}
+	});
+}, { threshold: 0.2 });
+
+projectCards.forEach((card) => {
+	card.classList.add('reveal');
+	revealObserver.observe(card);
+});
