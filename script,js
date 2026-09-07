@@ -37,3 +37,4 @@ projectCards.forEach((card) => {
 	card.classList.add('reveal');
 	revealObserver.observe(card);
 });
+//bb
